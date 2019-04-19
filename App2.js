@@ -2,22 +2,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Table from './Table2' // class component
-//import TableHeader from'./TableHeader'; // Single component
-//import TableBody from './Tablebody'; // Single component
+import Table from './Table' // class component
+import Form from'./form'
 
 
 class App extends Component {
   constructor(props)
   {
     super(props);
-
+    
     this.state= {
       characters:[
-       {name: "Tamil", age: "22"},
-       {name: "Abi", age: "28"},
-       {name: "Akil", age: "20"}
-    ]}
+      // {name: "Tamil", age: "22"},
+      // {name: "Abi", age: "28"},
+     //{name: "Akil", age: "20"}
+    ]
+  }
   
   this.removeCharacter = index =>{
     const{characters} = this.state
@@ -27,11 +27,19 @@ class App extends Component {
       })
     })
   }
+this.handleSubmit = character =>{
+  this.setState({characters:[...this.state.characters,character]})
+}
+
+
+
 }
   render() {
     return (
+   
       <div className="container">
         <Table characterData={this.state.characters} removeCharacter ={this.removeCharacter}/>
+        <Form handleSubmit={this.handleSubmit} />
       </div>
     )
 }
@@ -39,3 +47,4 @@ class App extends Component {
 }
 
 export default App;
+
