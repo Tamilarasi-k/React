@@ -28,6 +28,7 @@ class App extends Component {
     })
   }
 this.handleSubmit = character =>{
+  character.age = character.age*2; 
   this.setState({characters:[...this.state.characters,character]})
 }
 
