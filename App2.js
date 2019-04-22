@@ -13,10 +13,7 @@ class App extends Component {
     
     this.state= {
       characters:[
-      // {name: "Tamil", age: "22"},
-      // {name: "Abi", age: "28"},
-     //{name: "Akil", age: "20"}
-    ]
+      ]
   }
   
   this.removeCharacter = index =>{
@@ -28,7 +25,7 @@ class App extends Component {
     })
   }
 this.handleSubmit = character =>{
-  character.age = character.age*2; 
+  
   this.setState({characters:[...this.state.characters,character]})
 }
 
@@ -48,4 +45,3 @@ this.handleSubmit = character =>{
 }
 
 export default App;
-
