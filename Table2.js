@@ -13,8 +13,13 @@ class Table extends Component {
       <table>
         <thead>
           <tr>
+          <th>Roll_no</th>
             <th>Name</th>
-            <th>Age</th>
+            <th>Tamil</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Social</th>
             <th>remove</th>
           </tr>
 
@@ -24,8 +29,13 @@ class Table extends Component {
             characterData.length > 0 ? 
             characterData.map((val, index )=> (
               <tr key={index}>
-              <td>{val.name}</td>
-              <td>{val.age}</td>
+            <td>{val.RollNo}</td>
+              <td>{val.Name}</td>
+              <td>{val.Tamil}</td>
+              <td>{val.English}</td>
+              <td>{val.Maths}</td>
+              <td>{val.Science}</td>
+              <td>{val.Social }</td>
               <td>
                 
               <button onClick={() =>removeCharacter(index) }>Delete</button>
